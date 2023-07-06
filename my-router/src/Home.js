@@ -28,10 +28,10 @@ function Home()
             <table >
                 <tr>
                 <th>ID</th>
-                <th>Name</th>
-                <th>Profile Image</th>
+                <th>Name</th>              
                 <th>Phone</th>
                 <th>Email</th>
+                <th>Address </th>
                 </tr>
         {   
             profile.map((users, i)=>(
@@ -44,11 +44,15 @@ function Home()
                  
                  </td>
               <td>{users.name}</td>
-              <td>
-                <img src={users.imgURL}/></td>
+             
               <td>{users.phone}</td> 
               <td>{users.email}</td>
+             <td>
+              <p><b>street:</b> {users.address.street} </p>
+              <p><b>city:</b> {users.address.city} </p>
+              <p><b>zipcode:</b> {users.address.zipcode} </p>
              
+             </td>
               </tr>
             )
             )
